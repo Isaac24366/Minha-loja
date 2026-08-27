@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechPlay Store | PCs, Dispositivos & Jogos</title>
+  <meta name="description" content="Loja virtual de PCs gamer, notebooks, periféricos e jogos. As melhores ofertas em tecnologia e gaming.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <i class="fas fa-gamepad"></i>
+        <span>Tech<span class="accent">Play</span></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Início</a></li>
+          <li><a href="#pcs" class="nav-link">PCs</a></li>
+          <li><a href="#dispositivos" class="nav-link">Dispositivos</a></li>
+          <li><a href="#jogos" class="nav-link">Jogos</a></li>
+          <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-btn" aria-label="Buscar" id="searchToggle">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Carrinho" id="cartToggle">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Buscar PCs, notebooks, jogos..." id="searchInput">
+        <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Seu Carrinho</h3>
+      <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Seu carrinho está vazio</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="badge">Nova Coleção 2026</span>
+          <h1>Domine o Game.<br><span class="gradient-text">Eleve seu Setup.</span></h1>
+          <p>PCs gamer de alto desempenho, periféricos premium e os melhores jogos. Tudo em um só lugar com os melhores preços.</p>
+          <div class="hero-btns">
+            <a href="#pcs" class="btn btn-primary">Ver PCs Gamer</a>
+            <a href="#ofertas" class="btn btn-outline">Ofertas Relâmpago</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-glow"></div>
+            <i class="fas fa-desktop"></i>
+            <span>RTX 5090 Ready</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>15k+</strong>
+          <span>Clientes</span>
+        </div>
+        <div class="stat">
+          <strong>2.4k+</strong>
+          <span>Produtos</span>
+        </div>
+        <div class="stat">
+          <strong>4.9★</strong>
+          <span>Avaliação</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Categorias</h2>
+          <p>Explore o que temos de melhor</p>
+        </div>
+        <div class="categories-grid">
+          <a href="#pcs" class="category-card">
+            <div class="category-icon"><i class="fas fa-desktop"></i></div>
+            <h3>PCs Gamer</h3>
+            <p>Desktops e notebooks de alta performance</p>
+            <span class="category-count">128 produtos</span>
+          </a>
+          <a href="#dispositivos" class="category-card">
+            <div class="category-icon"><i class="fas fa-headset"></i></div>
+            <h3>Dispositivos</h3>
+            <p>Periféricos, monitores e acessórios</p>
+            <span class="category-count">340 produtos</span>
+          </a>
+          <a href="#jogos" class="category-card">
+            <div class="category-icon"><i class="fas fa-gamepad"></i></div>
+            <h3>Jogos</h3>
+            <p>Títulos digitais e físicos para PC e console</p>
+            <span class="category-count">890 produtos</span>
+          </a>
+          <a href="#ofertas" class="category-card category-card-accent">
+            <div class="category-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Ofertas</h3>
+            <p>Descontos imperdíveis por tempo limitado</p>
+            <span class="category-count">Até 50% OFF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PCs Section -->
+    <section class="products section" id="pcs">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>PCs & Notebooks</h2>
+            <p>Máquinas prontas para qualquer desafio</p>
+          </div>
+          <a href="#" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="products-grid" id="pcsGrid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Devices Section -->
+    <section class="products section section-alt" id="dispositivos">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Dispositivos & Periféricos</h2>
+            <p>Complete seu setup com o melhor</p>
+          </div>
+          <a href="#" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="products-grid" id="devicesGrid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="products section" id="jogos">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Jogos em Destaque</h2>
+            <p>Os títulos mais jogados do momento</p>
+          </div>
+          <a href="#" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="products-grid" id="gamesGrid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers Banner -->
+    <section class="offers section" id="ofertas">
+      <div class="container">
+        <div class="offers-banner">
+          <div class="offers-content">
+            <span class="badge badge-red">Oferta Relâmpago</span>
+            <h2>Até 40% OFF em PCs Selecionados</h2>
+            <p>Aproveite descontos exclusivos em setups gamer. Oferta válida por tempo limitado.</p>
+            <div class="countdown" id="countdown">
+              <div class="countdown-item">
+                <span id="cdHours">12</span>
+                <small>Horas</small>
+              </div>
+              <div class="countdown-item">
+                <span id="cdMins">34</span>
+                <small>Min</small>
+              </div>
+              <div class="countdown-item">
+                <span id="cdSecs">56</span>
+                <small>Seg</small>
+              </div>
+            </div>
+            <a href="#pcs" class="btn btn-primary">Aproveitar Agora</a>
+          </div>
+          <div class="offers-visual">
+            <i class="fas fa-fire"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature">
+            <i class="fas fa-truck-fast"></i>
+            <h4>Frete Grátis</h4>
+            <p>Em compras acima de R$ 299</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-halved"></i>
+            <h4>Compra Segura</h4>
+            <p>Pagamento 100% protegido</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-rotate-left"></i>
+            <h4>30 Dias para Troca</h4>
+            <p>Devolução fácil e rápida</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-headset"></i>
+            <h4>Suporte 24/7</h4>
+            <p>Atendimento especializado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter section">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-text">
+            <h2>Fique por dentro das ofertas</h2>
+            <p>Receba cupons exclusivos e lançamentos direto no seu e-mail.</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Seu melhor e-mail" required>
+            <button type="submit" class="btn btn-primary">Assinar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <i class="fas fa-gamepad"></i>
+            <span>Tech<span class="accent">Play</span></span>
+          </a>
+          <p>Sua loja de confiança para PCs, periféricos e jogos. Qualidade e performance garantidas.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Loja</h4>
+          <ul>
+            <li><a href="#pcs">PCs Gamer</a></li>
+            <li><a href="#dispositivos">Dispositivos</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Rastrear Pedido</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Garantia</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechPlay Store. Todos os direitos reservados.</p>
+        <div class="payment-icons">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-pix"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
